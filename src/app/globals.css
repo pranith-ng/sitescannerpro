@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+body {
+  text-shadow:
+    1px 1px 2px #fff9ed,
+   -1px -1px 2px #c1bbb3;
+}
+
+/* Normal neumorphic button */
+.neumorphic{
+  box-shadow: 5px 5px 6px #c1bbb3, -4px -4px 6px #fff9ed;
+}
+
+/* Pressed neumorphic button */
+.neumorphic-pressed {
+  box-shadow: inset 5px 5px 6px #c1bbb3, inset -4px -4px 6px #fff9ed;
+}
+
+.neumorphic-pressed-input {
+  box-shadow: inset 3px 3px 6px #c1bbb3, inset -3px -3px 6px #fff9ed;
+}
+
+
+/* Progress bar container between outer and inner circles */
+.progress-bar {
+  height: 12px;
+  width: 80%;
+  background-color: #d1d1d1;
+  border-radius: 6px;
+  margin: 16px auto; /* center inside outer circle */
+  box-shadow: inset 2px 2px 2px #c1bbb3, inset -2px -2px 2px #fff9ed;
+}
+
+/* Blue progress fill */
+.progress-fill {
+  height: 100%;
+  background-color: #3b82f6;
+  border-radius: 6px;
+  transition: width 1s ease;
+ box-shadow: 8px 8px 7px #c1bbb3, -5px -5px 7px #fff9ed;}
+
+ /* From Uiverse.io by javierBarroso */ 
+button {
+  cursor: pointer;
+  /* border: 1px solid #e8e8e8; */
+  transition: all 0.3s;
+  box-shadow: 5px 5px 6px #c1bbb3, -4px -4px 6px #fff9ed;
+  text-shadow:
+    1px 1px 2px #fff9ed,
+   -1px -1px 2px #c1bbb3;
+}
+
+button:active {
+  /* color: #666; */
+  font-size: 10px;
+  box-shadow: 0px 0px 0px #c1bbb3,
+    0px 0px 0px #fff9ed, inset 5px 5px 6px #c1bbb3, inset -4px -4px 6px #fff9ed;
+  /* box-shadow: */
+    /* 0px 0px 0px #c1bbb3,
+    0px 0px 0px #fff9ed,
+    inset 4px 4px 12px #c1bbb3,
+    inset -4px -4px 12px #fff9ed; */
+}
+
+
