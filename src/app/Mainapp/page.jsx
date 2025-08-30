@@ -108,7 +108,7 @@ export default function ScanForm() {
               initial={{ opacity: 0, scale: 0.5 }}        // before visible
               whileInView={{ opacity: 1, scale: 1 }}     // when in viewport
               transition={{ duration: 1.4, ease: "backOut" }}
-              viewport={{ once: true, amount: 0.2 }} // run once, when 20% of div is visible
+              viewport={{ once: true }} // run once, when 20% of div is visible
             >
               <div className="mt-3 m-auto md:max-w-3/5">
                 <h2 className="py-6 text-xl font-semibold text-center">Website Performance Scores:</h2>

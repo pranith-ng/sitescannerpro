@@ -28,7 +28,7 @@ export default function Herocomp() {
         initial={{ opacity: 0, scale: 0.5 }}        // before visible
         whileInView={{ opacity: 1, scale: 1 }}     // when in viewport
         transition={{ duration: 1.4, ease: "backOut" }}
-        viewport={{ once: true, amount: 0.2 }} // run once, when 20% of div is visible
+        viewport={{ once: true}} // run once, when 20% of div is visible
 
         className="flex flex-col text-[#213555]  items-center justify-center rounded-3xl mt-10">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-snug mb-6 text-center text-engraved ">
