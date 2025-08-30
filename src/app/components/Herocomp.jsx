@@ -26,7 +26,7 @@ export default function Herocomp() {
       <motion.div
 
         initial={{ opacity: 0, scale: 0.5 }}        // before visible
-        whileInView={{ opacity: 1, scale: 1 }}     // when in viewport
+        animate={{ opacity: 1, scale: 1 }}     // when in viewport
         transition={{ duration: 1.4, ease: "backOut" }}
 
         className="flex flex-col text-[#213555]  items-center justify-center rounded-3xl mt-10">

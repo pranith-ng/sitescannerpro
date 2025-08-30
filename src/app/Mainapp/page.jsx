@@ -106,7 +106,7 @@ export default function ScanForm() {
 
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}        // before visible
-              whileInView={{ opacity: 1, scale: 1 }}     // when in viewport
+              animate={{ opacity: 1, scale: 1 }}     // when in viewport
               transition={{ duration: 1.4, ease: "backOut" }}
             >
               <div className="mt-3 m-auto md:max-w-3/5">
