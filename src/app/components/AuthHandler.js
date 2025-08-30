@@ -23,7 +23,12 @@ export default async function AuthHandler({ email, password, action, provider })
     }
 
     if (action === "oauth" && provider === "google"){
-      const result = await supabase.auth.signInWithOAuth({provider: "google"})
+      const result = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+          redirectTo: window.location.origin
+        },
+      })
       if(result.error) throw result.error;
       return result;
     }
