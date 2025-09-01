@@ -9,7 +9,6 @@ import Bar from "../components/Bar";
 import Metrics from "../components/Metrics";
 import Screenshot from "../components/Screenshot";
 import AIStr from "../components/Aistr";
-import { extractLighthouseSummary } from "@/lib/Userdatacreator"
 import { useRouter } from "next/navigation";
 
 export default function ScanForm() {
@@ -46,8 +45,13 @@ export default function ScanForm() {
 
       if (!res.ok) throw new Error(data.error || "Scan failed");
 
-      setResult(data);
-      console.log(data)
+      if (!data.lighthouseResult?.categories) {
+        setResult(null); 
+        setError("⚠️ Invalid or unsupported URL. Please try again.")
+      } else {
+        setResult(data);
+      }
+
     } catch (err) {
       setError(err.message || "Something went wrong");
     } finally {
@@ -55,8 +59,7 @@ export default function ScanForm() {
     }
   };
 
-  const checkings = extractLighthouseSummary(result)
-  console.log(checkings)
+
 
   useEffect(() => {
     if (!user) {
@@ -99,7 +102,7 @@ export default function ScanForm() {
 
           </form>
 
-          {error && <p className="text-red-600 mt-2">{error}</p>}
+          {error && <p className="text-center text-red-600 ml-7 mt-4">{error}</p>}
 
 
           {result &&

@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
           margin: 0,
           position: "relative", // needed for motion div
           minHeight: "100vh",
-          backgroundColor: "#E0DAD0", // ensures no flash
+          backgroundColor: "#E0DAD0", 
           overflowX: "hidden",
         }}
       >

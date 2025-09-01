@@ -21,15 +21,10 @@ export default function Page() {
     const [loading, setloading] = useState(false)
     const [errormsg, seterrormsg] = useState("")
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     console.log("Logging in with:", { username, password });
-    // };
 
     const GooglehandleClick = async () => {
         const result = await AuthHandler({action: "oauth", provider: "google", })
         if(result.error){
-            console.log(result.error)
             seterrormsg(result.error)
         }
         if(result.data?.url){
@@ -43,8 +38,6 @@ export default function Page() {
         e.preventDefault()
         const result = await AuthHandler({ email: username, password: password, action: "login" })
         if (result.error) {
-            // setMessage(result.error)
-            console.log(result.error)
             seterrormsg(result.error)
             setloading(false)
         }

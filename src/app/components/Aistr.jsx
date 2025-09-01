@@ -128,8 +128,6 @@ ${aiInput}
             }
             const data = await res.json()
             setReply(data.reply)
-            console.log(data.reply)
-            console.log(aiInput)
         } catch (err) {
             setError(err.message);
         } finally {
@@ -138,7 +136,6 @@ ${aiInput}
 
     }
 
-    console.log(aiInput)
 
     function convertReportToHTML(text) {
         const lines = text.split("\n");

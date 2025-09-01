@@ -21,8 +21,7 @@ const Bar = ({ percentage = 75, name }) => {
   useEffect(() => {
     const key = name.toLowerCase().replace(" ", "");
     setdescription(categoryDescriptions[key]);
-    console.log(key)
-  }, [name]); // only runs when `name` changes
+  }, [name]); 
 
  const getColor = (value) => {
   if (value < 50) return "#ef4444"; // red
@@ -66,14 +65,13 @@ const Bar = ({ percentage = 75, name }) => {
           </h2>
         </div>
 
-        {/* Back side (optional, can be empty) */}
+      
         <div className="backface-hidden rotate-y-180 absolute top-0 left-0 w-full h-full p-6 pt-8">
           <div className="flex justify-between">
             <span></span>
             <button className="absolute top-3 right-3 neumorphic rounded-full p-1"><IoCloseSharp /></button>
           </div>
           {description}
-          {/* You can keep this empty or add something else */}
         </div>
       </div>
     </div>

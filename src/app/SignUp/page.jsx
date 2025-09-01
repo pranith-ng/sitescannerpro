@@ -43,7 +43,6 @@ export default function SignUpPage() {
         const result = await AuthHandler({ email: username, password: password, action: "signup" })
         if (result.error) {
             seterrormsg(result.error)
-            console.log(result.error)
             setloading(false)
         }
         if (result) {

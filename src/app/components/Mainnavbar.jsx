@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { RiAccountCircle2Line } from "react-icons/ri";
 import {useRouter} from "next/navigation"
 
-import Sidebar from "./Sidebar";
 
 const MainNavbar = () => {
 
@@ -13,14 +12,11 @@ const MainNavbar = () => {
   return (
     <>
       <nav className="flex items-center justify-between h-16 px-4 max-w-[1300px] m-auto bg-[#E0DAD0] text-[#1b4c9c] fixed top-0 left-0 right-0 z-50">
-        {/* Left side: Hamburger + Website name */}
         <div className="flex items-center space-x-4">
          
-          {/* Website name */}
           <h1 className="text-xl font-semibold select-none">SiteScannerPro</h1>
         </div>
 
-        {/* Right side: User avatar */}
         <div>
            <button 
           onClick={gotoaccount}
@@ -29,9 +25,7 @@ const MainNavbar = () => {
       </nav>
 
       
-      {/* Add padding to main content below navbar to avoid overlap */}
       <div className="pt-16">
-        {/* Your main page content goes here */}
       </div>
     </>
   );

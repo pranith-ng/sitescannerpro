@@ -15,16 +15,13 @@ const page = () => {
 
 
     const handleSignOut = async () => {
-        console.log('clicked')
         setloading(true)
         const result = await AuthHandler({ action: "signout" })
         if (result.error) {
-            // setMessage(result.error)
             console.log(result.error)
             setloading(false)
         }
         if (result) {
-            console.log(result)
             setloading(false)
         }
     }
