@@ -25,7 +25,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full px-4 z-50 md:px-16 ">
       <div className="max-w-[1300px] m-auto flex justify-between items-center py-5 ">
 
-        <span className="font-semibold text-xl text-[#1b4c9c]">SiteScannerPro</span>
+        <span className="font-semibold text-xl text-[#1b4c9c] hover:cursor-pointer ">SiteScannerPro</span>
 
         {user ?
           <div>

@@ -14,7 +14,9 @@ const MainNavbar = () => {
       <nav className="flex items-center justify-between h-16 px-4 max-w-[1300px] m-auto bg-[#E0DAD0] text-[#1b4c9c] fixed top-0 left-0 right-0 z-50">
         <div className="flex items-center space-x-4">
          
-          <h1 className="text-xl font-semibold select-none">SiteScannerPro</h1>
+          <h1
+           onClick={() => router.push("/")}
+           className="text-xl font-semibold select-none hover:cursor-pointer ">SiteScannerPro</h1>
         </div>
 
         <div>
