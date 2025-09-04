@@ -17,7 +17,9 @@ export default function Herocomp() {
   function loginbutton() {
     router.push('/Login')
   }
-
+  function gotodemo(){
+     router.push('/Demo')
+  }
 
   const { user } = useContext(AppContext)
 
@@ -51,10 +53,10 @@ export default function Herocomp() {
 
       <div className="flex gap-3 items-center justify-center mt-8">
         {user ? <Button buttonname={"Go to app"} onclickfunction={gotoapp} />
-          : <Button buttonname={"login"} onclickfunction={loginbutton} />
+          : <Button buttonname={"Login"} onclickfunction={loginbutton} />
         }
 
-        <Button buttonname={"See Demo"} />
+        <Button buttonname={"See Demo"} onclickfunction={gotodemo}/>
       </div>
 
     </section>
