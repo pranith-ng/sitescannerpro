@@ -46,7 +46,7 @@ export default function ScanForm() {
       if (!res.ok) throw new Error(data.error || "Scan failed");
 
       if (!data.lighthouseResult?.categories) {
-        setResult(null); 
+        setResult(null);
         setError("⚠️ Invalid or unsupported URL. Please try again.")
       } else {
         setResult(data);
@@ -116,6 +116,7 @@ export default function ScanForm() {
                 <h2 className="py-6 text-xl font-semibold text-center">Website Performance Scores:</h2>
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2" >
                   {Object.entries(result.lighthouseResult.categories).map(([key, item], index) => {
+                                        
                     return (
                       <Bar
                         key={index} percentage={Math.round(item.score * 100)} name={item.title} />
