@@ -11,31 +11,31 @@ export const AppProvider = ({ children }) => {
 
 
   useEffect(() => {
-  // Check if a user session exists on page load
-  supabase.auth.getSession().then(function(result) {
-    if (result.data && result.data.session && result.data.session.user) {
-      setUser(result.data.session.user);
-    } else {
-      setUser(null);
-    }
-  });
+    // Check if a user session exists on page load
+    supabase.auth.getSession().then(function (result) {
+      if (result.data && result.data.session && result.data.session.user) {
+        setUser(result.data.session.user);
+      } else {
+        setUser(null);
+      }
+    });
 
-  // Listen for changes in authentication (login/logout)
-  const listener = supabase.auth.onAuthStateChange(function(event, session) {
-    if (session && session.user) {
-      setUser(session.user);
-    } else {
-      setUser(null);
-    }
-  });
+    // Listen for changes in authentication (login/logout)
+    const listener = supabase.auth.onAuthStateChange(function (event, session) {
+      if (session && session.user) {
+        setUser(session.user);
+      } else {
+        setUser(null);
+      }
+    });
 
-  // Cleanup the listener when component unmounts
-  return function cleanup() {
-    listener.data.unsubscribe();
-  };
-}, []);
+    // Cleanup the listener when component unmounts
+    return function cleanup() {
+      listener.data.subscription.unsubscribe();
+    };
+  }, []);
 
- 
+
 
 
   return (

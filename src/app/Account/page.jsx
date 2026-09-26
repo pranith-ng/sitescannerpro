@@ -18,7 +18,6 @@ const page = () => {
         setloading(true)
         const result = await AuthHandler({ action: "signout" })
         if (result.error) {
-            console.log(result.error)
             setloading(false)
         }
         if (result) {
